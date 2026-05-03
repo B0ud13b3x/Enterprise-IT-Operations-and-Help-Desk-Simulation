@@ -1,6 +1,16 @@
 
 # Enterprise IT Operations & Help Desk Simulation
-### 🛠️ Windows Server 2022 | Active Directory | Networking | ITSM (osTicket)
+<p align="center">
+<img src="https://cdn.worldvectorlogo.com/logos/active-directory-1.svg" alt="Active Directory logo">
+</p>
+
+<p align="center">
+ <b>🛠️ Windows Server 2022 | Active Directory | Networking | ITSM (osTicket)</b>
+</p>
+
+<p align="center">
+<img align="middle" src="https://osticket.com/wp-content/uploads/2021/03/osticket-supsys-new-1-e1616621912452.png" alt="osTicket">
+</p>
 
 ## 🎯 Project Objective
 This project is a high-fidelity simulation of an enterprise-level IT environment. It demonstrates the transition from **Infrastructure Deployment** (building the corporate backbone) to **Active Operations** (managing user lifecycles and technical incidents). By integrating a Windows Server 2022 Domain Controller with a functional ITSM platform (osTicket), I simulate the complete lifecycle of a technical incident from user submission to administrative resolution.
