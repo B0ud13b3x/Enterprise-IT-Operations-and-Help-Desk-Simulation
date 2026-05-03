@@ -1,4 +1,4 @@
-# 01 — Network Infrastructure Setup
+# Network Infrastructure Setup
 
 This section documents how I built the physical foundation of the lab:
 the virtual machines, network adapters, and routing that everything else runs on.
