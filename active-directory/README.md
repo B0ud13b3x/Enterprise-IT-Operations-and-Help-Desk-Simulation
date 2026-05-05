@@ -19,7 +19,7 @@ with realistic department structure and security policies.
 
 ---
 
-## Step 1 — Installing AD DS on the Server
+## Step 1 - Installing AD DS on the Server
 
 **Installation steps:**
 1. Server Manager → Add Roles and Features
@@ -33,13 +33,13 @@ After the server restarted it automatically logged in under the domain.
 The login screen now showed mydomain\Administrator instead of just Administrator.
 Server Manager also updated to show AD DS and DNS both installed and running.
 
-**Screenshot — Server Manager showing AD DS role installed:**
+**Screenshot : Server Manager showing AD DS role installed:**
 
 ![AD DS Installed](./screenshots/server-manager-adds.png)
 
 ---
 
-## Step 2 — Designing the Organizational Unit (OU) Structure
+## Step 2 - Designing the Organizational Unit (OU) Structure
 
 Rather than dumping all users into the default Users container,
 I designed a proper OU hierarchy that mirrors a real company structure.
@@ -74,18 +74,18 @@ password policy for Finance than for Sales.
 3. Named it `_CORP` (underscore keeps it at the top of the list)
 4. Inside `_CORP` → created Users, Goups, Computers OUs
 5. Inside `Users` → created IT, HR, Sales, Finance, _ADMIN OUs
-**Screenshot — OU hierarchy in AD Users and Computers:**
+**Screenshot : OU hierarchy in AD Users and Computers:**
 
 ![OU Structure](./screenshots/ou-hierarchy.png)
 
 ---
 
-## Step 3 — Group Policy Objects (GPOs)
+## Step 3 - Group Policy Objects (GPOs)
 
 Group Policy allows me to enforce security settings and configurations
 across all machines in the domain automatically . (no manual setup per machine.)
 
-### GPO 1 — Password Policy
+### GPO 1 - Password Policy
 
 | Setting | Value | Reason |
 |---|---|---|
@@ -101,15 +101,15 @@ I edited the Default Domain Policy to apply the password rules domain-wide.
 For the lockout policy I had to go into Account Policies → Account Lockout Policy
 separately  it's a common mistake to look for it inside Password Policy.
 
-**Screenshot — GPO Editor showing password policy settings:**
+**Screenshot : GPO Editor showing password policy settings:**
 
 ![Password Policy GPO](./screenshots/gpo-password-policy.png)
 
-**Screenshot — GPO Editor showing account lockout settings:**
+**Screenshot : GPO Editor showing account lockout settings:**
 
 ![Lockout Policy GPO](./screenshots/gpo-lockout-policy.png)
 
-### GPO 2 — Desktop Wallpaper / Login Banner (Optional)
+### GPO 2 - Desktop Wallpaper / Login Banner (Optional)
 
 If you configured any other GPOs (drive mapping,
 software deployment, login banners, etc.) describe them here in the same
@@ -117,7 +117,7 @@ format as above. If not yet, note it as "planned" and come back.
 
 ---
 
-## Step 4 — User Management
+## Step 4 - User Management
 
 ### Manual User Creation
 
