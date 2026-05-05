@@ -43,7 +43,7 @@ Server Manager also updated to show AD DS and DNS both installed and running.
 
 Rather than dumping all users into the default Users container,
 I designed a proper OU hierarchy that mirrors a real company structure.
-This matters because GPOs are applied at the OU level — good OU design
+This matters because GPOs are applied at the OU level. Good OU design
 means precise control over who gets what policy.
 
 **OU Structure:**
@@ -83,7 +83,7 @@ password policy for Finance than for Sales.
 ## Step 3 — Group Policy Objects (GPOs)
 
 Group Policy allows me to enforce security settings and configurations
-across all machines in the domain automatically — no manual setup per machine.
+across all machines in the domain automatically . (no manual setup per machine.)
 
 ### GPO 1 — Password Policy
 
@@ -96,11 +96,10 @@ across all machines in the domain automatically — no manual setup per machine.
 | Lockout Duration | 30 minutes | Auto-unlocks after 30 min |
 | Observation Window | 30 minutes | Resets counter after 30 min |
 
-<!-- YOU WRITE HERE — Describe how you applied this GPO.
-Example:
-"I edited the Default Domain Policy to apply the password rules domain-wide.
+
+I edited the Default Domain Policy to apply the password rules domain-wide.
 For the lockout policy I had to go into Account Policies → Account Lockout Policy
-separately — it's a common mistake to look for it inside Password Policy." -->
+separately  it's a common mistake to look for it inside Password Policy.
 
 **Screenshot — GPO Editor showing password policy settings:**
 
@@ -112,9 +111,9 @@ separately — it's a common mistake to look for it inside Password Policy." -->
 
 ### GPO 2 — Desktop Wallpaper / Login Banner (Optional)
 
-<!-- YOU WRITE HERE — If you configured any other GPOs (drive mapping,
+If you configured any other GPOs (drive mapping,
 software deployment, login banners, etc.) describe them here in the same
-format as above. If not yet, note it as "planned" and come back. -->
+format as above. If not yet, note it as "planned" and come back.
 
 ---
 
@@ -129,22 +128,21 @@ format as above. If not yet, note it as "planned" and come back. -->
 4. Set initial password → check "User must change password at next logon"
 5. Click Finish
 
-<!-- YOU WRITE HERE — Describe a specific user you created manually and why.
-Example:
-"I created an IT admin account called 'a-mboudieb' in the _ADMIN OU
-separate from my regular user account. This follows the least-privilege
-principle — the admin account is only used when admin rights are actually needed." -->
 
-**Screenshot — New user creation dialog:**
+I created an IT admin account called 'a-mboudieb' in the _ADMIN OU
+separate from my regular user account. This follows the least-privilege
+principle. The admin account is only used when admin rights are actually needed.
+
+**Screenshot : New user creation dialog:**
 
 ![New User](./screenshots/new-user-creation.png)
 
 ### Bulk User Creation (via PowerShell)
 
 For scale testing, I created 1,000+ users automatically using a PowerShell script.
-See the full documentation in [03-powershell-automation](../03-powershell-automation/README.md).
+See the full documentation in [powershell-automation](../powershell-automation/README.md).
 
-**Screenshot — AD Users and Computers showing bulk-created users:**
+**Screenshot : AD Users and Computers showing bulk-created users:**
 
 ![Bulk Users in AD](./screenshots/bulk-users-ad.png)
 
@@ -152,7 +150,7 @@ See the full documentation in [03-powershell-automation](../03-powershell-automa
 
 ## Key Concepts Demonstrated
 
-- **Least privilege** — users are placed in department OUs and only receive permissions relevant to their role
-- **Security baseline via GPO** — password complexity and lockout enforced domain-wide automatically
-- **OU design** — structure reflects real enterprise organization, enabling precise policy targeting
-- **Separation of admin accounts** — administrative users live in `_ADMIN`, separate from standard users
+- **Least privilege** : users are placed in department OUs and only receive permissions relevant to their role
+- **Security baseline via GPO** : password complexity and lockout enforced domain-wide automatically
+- **OU design** : structure reflects real enterprise organization, enabling precise policy targeting
+- **Separation of admin accounts** : administrative users live in `_ADMIN`, separate from standard users
