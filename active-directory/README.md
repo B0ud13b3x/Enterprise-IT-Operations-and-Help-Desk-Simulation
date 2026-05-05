@@ -29,11 +29,9 @@ with realistic department structure and security policies.
 5. Root domain name: `mydomain.com`
 6. Set DSRM password → completed the wizard → server restarted
 
-<!-- YOU WRITE HERE — Describe what happened during the promotion.
-Example:
-"After the server restarted it automatically logged in under the domain.
+After the server restarted it automatically logged in under the domain.
 The login screen now showed mydomain\Administrator instead of just Administrator.
-Server Manager also updated to show AD DS and DNS both installed and running." -->
+Server Manager also updated to show AD DS and DNS both installed and running.
 
 **Screenshot — Server Manager showing AD DS role installed:**
 
@@ -53,28 +51,29 @@ means precise control over who gets what policy.
 ```
 mydomain.com
 └── _CORP                        ← Top-level OU (custom, not default)
-    ├── IT
-    ├── HR
-    ├── Sales
-    ├── Finance
-    └── _ADMIN                   ← Separated admin accounts from regular users
+     ├── Computers
+     ├── Goups
+     └── Users
+          ├── _ADMIN               ← Separated admin accounts from regular users
+          ├── HR
+          ├── Sales
+          ├── Finance 
+          └── IT                 
 ```
 
 **Why I put users in `_CORP` instead of the default container:**
 
-<!-- YOU WRITE HERE — Explain your reasoning.
-Example:
-"The default 'Users' container in AD can't have GPOs applied directly to it.
+The default 'Users' container in AD can't have GPOs applied directly to it.
 By creating a custom OU structure under _CORP, I can apply department-specific
 policies to exactly the right group of users. For example, a stricter
-password policy for Finance than for Sales." -->
+password policy for Finance than for Sales.
 
 **Steps to create OUs:**
 1. Tools → Active Directory Users and Computers
 2. Right-click `mydomain.com` → New → Organizational Unit
 3. Named it `_CORP` (underscore keeps it at the top of the list)
-4. Inside `_CORP` → created IT, HR, Sales, Finance, _ADMIN OUs
-
+4. Inside `_CORP` → created Users, Goups, Computers OUs
+5. Inside `Users` → created IT, HR, Sales, Finance, _ADMIN OUs
 **Screenshot — OU hierarchy in AD Users and Computers:**
 
 ![OU Structure](./screenshots/ou-hierarchy.png)
