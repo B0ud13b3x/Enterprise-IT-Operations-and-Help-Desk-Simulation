@@ -2,18 +2,18 @@
 
 This section documents how I designed and configured the identity
 and access management layer of the lab using Active Directory.
-
+ 
 ---
-
+ 
 ## What is AD DS and Why It Matters
-
+ 
 Active Directory Domain Services is the backbone of identity management
 in virtually every enterprise Windows environment. It controls:
 - Who can log in and to which machines
 - What resources each user can access
 - What policies apply to each department
 - How users are organized across the company
-
+ 
 In this lab, `mydomain.com` acts as a simulated corporate forest
 with realistic department structure and security policies.
 
