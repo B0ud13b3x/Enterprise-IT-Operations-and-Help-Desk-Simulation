@@ -129,11 +129,11 @@ Login Banner for client 1 and 2 (Windows/device) it should be :
 
  for m.tuck (from finance)
  
-<img alt="Desktop Wallpaper c1 GPO" src="./screenshots/gpo-Desktop-Wallpaper-policyc1.png" width="500">
+<img alt="Desktop Wallpaper c1 GPO" src="./screenshots/gpo-Desktop-Wallpaper-policyc1.png" width="700">
 
  for d.wain (from HR)
  
-<img alt="Desktop Wallpaper c2 GPO" src="./screenshots/gpo-Desktop-Wallpaper-policyc2.png" width="500">
+<img alt="Desktop Wallpaper c2 GPO" src="./screenshots/gpo-Desktop-Wallpaper-policyc2.png" width="700">
 
 **Screenshot : GPO Editor showing Login Banner settings:**
 
