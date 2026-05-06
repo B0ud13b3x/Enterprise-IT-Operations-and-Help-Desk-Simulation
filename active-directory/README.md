@@ -119,10 +119,10 @@ Wallpaper for client 2 (user) it should be :
 ![Desktop Wallpaper c2](https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=4896&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
 
 Login Banner for client 1 and 2 (Windows/device) it should be :
-![Login Banner c1+2](./screenshots/Login-Banner.png)
+![Login Banner c1+2](./screenshots/Login-Banner.jpg)
 
 
-**Screenshot : GPO Editor showing Desktop Wallpaper settings:**
+**Screenshots : GPO Editor showing Desktop Wallpaper settings:**
 
  for client 1
 ![Desktop Wallpaper c1 GPO](./screenshots/gpo-Desktop-Wallpaper-policyc1.png)
