@@ -112,11 +112,11 @@ separately  it's a common mistake to look for it inside Password Policy.
 ### GPO 2 - Desktop Wallpaper / Login Banner 
 Setting up Desktop Wallpapers for users + Login Banner for client 1 (win10) and client 2 (win11) as follows:
 
-Wallpaper for client 1 (user) it should be :
+Wallpaper for m.tuck (from finance) it should be :
 
 <img alt="Desktop Wallpaper c1" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=3506&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="500">
 
-Wallpaper for client 2 (user) it should be :
+Wallpaper for d.wain (from HR) it should be :
 
 <img alt="Desktop Wallpaper c2" src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=4896&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="500">
 
@@ -127,11 +127,11 @@ Login Banner for client 1 and 2 (Windows/device) it should be :
 
 **Screenshots : GPO Editor showing Desktop Wallpaper settings:**
 
- for client 1
+ for m.tuck (from finance)
  
 <img alt="Desktop Wallpaper c1 GPO" src="./screenshots/gpo-Desktop-Wallpaper-policyc1.png" width="500">
 
- for client 2
+ for d.wain (from HR)
  
 <img alt="Desktop Wallpaper c2 GPO" src="./screenshots/gpo-Desktop-Wallpaper-policyc2.png" width="500">
 
@@ -141,15 +141,20 @@ Login Banner for client 1 and 2 (Windows/device) it should be :
 
 ### verifying if the GPOs worked
 
-**'s Wallpaper**
+**m.tuck's Wallpaper**
 <img alt="Desktop Wallpaper c1 GPO" src="./screenshots/gpo-Desktop-Wallpaper-policyc1-conformed.png" width="500">
 
-**'s Wallpaper**
+**d.wain's Wallpaper**
 <img alt="Desktop Wallpaper c2 GPO" src="./screenshots/gpo-Desktop-Wallpaper-policyc2-conformed.png" width="500">
 
 **Windows 10 and 11 login Banner:**
-<img alt="login Banner GPO" src="./screenshots/gpo-Login-Banner-policy-conformed.png" width="500">
+windows 10
 
+<img alt="login Banner GPOwin10" src="./screenshots/gpo-Login-Banner-policy-conformedwin10.png" width="500">
+
+windows 11
+
+<img alt="login Banner GPOwin11" src="./screenshots/gpo-Login-Banner-policy-conformedwin11.png" width="500">
 ---
 
 ## Step 4 - User Management
