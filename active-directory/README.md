@@ -110,17 +110,40 @@ separately  it's a common mistake to look for it inside Password Policy.
 ![Lockout Policy GPO](./screenshots/gpo-lockout-policy.png)
 
 ### GPO 2 - Desktop Wallpaper / Login Banner 
+Setting up Desktop Wallpapers for users + Login Banner for client 1 (win10) and client 2 (win11) as follows:
+
+Wallpaper for client 1 (user) it should be :
+![Desktop Wallpaper c1](https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=3506&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+
+Wallpaper for client 2 (user) it should be :
+![Desktop Wallpaper c2](https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=4896&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+
+Login Banner for client 1 and 2 (Windows/device) it should be :
+![Login Banner c1+2](./screenshots/Login-Banner.png)
+
 
 **Screenshot : GPO Editor showing Desktop Wallpaper settings:**
 
-![Lockout Policy GPO](./screenshots/gpo-Desktop-Wallpaper-policy.png)
+ for client 1
+![Desktop Wallpaper c1 GPO](./screenshots/gpo-Desktop-Wallpaper-policyc1.png)
+
+ for client 2
+![Desktop Wallpaper c2 GPO](./screenshots/gpo-Desktop-Wallpaper-policyc2.png)
 
 **Screenshot : GPO Editor showing Login Banner settings:**
 
-![Lockout Policy GPO](./screenshots/gpo-Login-Banner-policy.png)
+![Login Banner GPO](./screenshots/gpo-Login-Banner-policy.png)
 
-### verifying if the gpo worked
+### verifying if the GPOs worked
 
+'s Wallpaper
+![Desktop Wallpaper c1 GPO](./screenshots/gpo-Desktop-Wallpaper-policyc1-conformed.png)
+
+'s Wallpaper
+![Desktop Wallpaper c2 GPO](./screenshots/gpo-Desktop-Wallpaper-policyc2-conformed.png)
+
+Windows 10 and 11 login Banner:
+![login Banner GPO](./screenshots/gpo-Login-Banner-policy-conformed.png)
 
 ---
 
