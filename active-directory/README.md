@@ -109,11 +109,18 @@ separately  it's a common mistake to look for it inside Password Policy.
 
 ![Lockout Policy GPO](./screenshots/gpo-lockout-policy.png)
 
-### GPO 2 - Desktop Wallpaper / Login Banner (Optional)
+### GPO 2 - Desktop Wallpaper / Login Banner 
 
-If you configured any other GPOs (drive mapping,
-software deployment, login banners, etc.) describe them here in the same
-format as above. If not yet, note it as "planned" and come back.
+**Screenshot : GPO Editor showing Desktop Wallpaper settings:**
+
+![Lockout Policy GPO](./screenshots/gpo-Desktop-Wallpaper-policy.png)
+
+**Screenshot : GPO Editor showing Login Banner settings:**
+
+![Lockout Policy GPO](./screenshots/gpo-Login-Banner-policy.png)
+
+### verifying if the gpo worked
+
 
 ---
 
