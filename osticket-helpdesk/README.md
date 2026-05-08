@@ -1,7 +1,7 @@
 # Help Desk Operations (osTicket ITSM)
 
 This section documents how I deployed and configured osTicket to simulate
-a real enterprise IT Service Management (ITSM) workflow — from ticket
+a real enterprise IT Service Management (ITSM) workflow , from ticket
 submission to resolution.
 
 ---
@@ -31,15 +31,13 @@ is a baseline expectation for any help desk role.
 
 ---
 
-## Step 1 — Installing osTicket on the Server
+## Step 1 - Installing osTicket on the Server
 
-<!-- YOU WRITE HERE — Describe the installation process.
-Example:
-"Installing osTicket required first enabling IIS on the server through
+Installing osTicket required first enabling IIS on the server through
 Server Manager → Add Roles → Web Server (IIS). Then I installed PHP,
 MySQL, and the osTicket files. The trickiest part was configuring the
-PHP extensions that osTicket requires — I had to enable several in the
-php.ini file manually." -->
+PHP extensions that osTicket requires .( I had to enable several in the
+php.ini file manually.)
 
 **Prerequisites I installed before osTicket:**
 - IIS (Web Server role via Server Manager)
@@ -47,13 +45,8 @@ php.ini file manually." -->
 - MySQL
 - Required PHP extensions: `php_imap.dll`, `php_intl.dll`, `php_opcache.dll`
 
-**Screenshot — osTicket installer completing successfully:**
 
-![osTicket Install](./screenshots/osticket-install.png)
-
----
-
-## Step 2 — Configuring the Help Desk Structure
+## Step 2 - Configuring the Help Desk Structure
 
 Before tickets can be routed correctly, I set up the organizational structure
 of the help desk inside osTicket's admin panel.
@@ -68,14 +61,8 @@ Departments determine which team handles which tickets.
 | Networking | Connectivity and infrastructure issues |
 | SysAdmin | Server-level and AD-related issues |
 
-<!-- YOU WRITE HERE — List the departments you actually created.
-Example:
-"I kept it simple with two departments: Level 1 Support for basic issues
-and SysAdmin for anything requiring server or AD access." -->
-
-### Teams
-
-<!-- YOU WRITE HERE — Describe any teams you set up if applicable. -->
+I kept it simple with two departments: Level 1 Support for basic issues
+and SysAdmin for anything requiring server or AD access.
 
 ### Agents (Technicians)
 
@@ -83,15 +70,13 @@ and SysAdmin for anything requiring server or AD access." -->
 |---|---|---|
 | Mohammed Boudieb | IT Support | Admin |
 
-<!-- YOU WRITE HERE — List the agents you created in osTicket. -->
 
-**Screenshot — osTicket Admin Panel → Agents:**
+**Screenshot : osTicket Admin Panel → Agents:**
 
 ![Agents Panel](./screenshots/osticket-agents.png)
 
----
 
-## Step 3 — SLA (Service Level Agreement) Configuration
+## Step 3 - SLA (Service Level Agreement) Configuration
 
 SLAs define how quickly tickets must be resolved based on severity.
 In real IT departments, missing SLAs has business and contractual consequences.
@@ -102,19 +87,16 @@ In real IT departments, missing SLAs has business and contractual consequences.
 | SEV-B (High) | 4 hours | 24/7 | Multiple users affected |
 | SEV-C (Low) | 8 hours | Business hours | Single user, non-urgent issues |
 
-<!-- YOU WRITE HERE — Describe how you set this up in osTicket.
-Example:
-"I created three SLA plans in Admin Panel → Manage → SLA Plans.
+I created three SLA plans in Admin Panel → Manage → SLA Plans.
 SEV-A is set to 1 hour with 24/7 coverage because a system outage
-affecting everyone can't wait until business hours." -->
+affecting everyone can't wait until business hours.
 
-**Screenshot — SLA Plans configured in osTicket:**
+**Screenshot : SLA Plans configured in osTicket:**
 
 ![SLA Config](./screenshots/osticket-sla.png)
 
----
 
-## Step 4 — Help Topics (Ticket Categories)
+## Step 4 - Help Topics (Ticket Categories)
 
 Help Topics are what end users select when submitting a ticket.
 They determine automatic routing and SLA assignment.
@@ -127,15 +109,14 @@ They determine automatic routing and SLA assignment.
 | Personal Computer Issues | IT Support | SEV-B |
 | Network Connectivity Issue | Networking | SEV-B |
 
-<!-- YOU WRITE HERE — List the help topics you actually created. -->
 
-**Screenshot — Help Topics in osTicket:**
+**Screenshot : Help Topics in osTicket:**
 
 ![Help Topics](./screenshots/osticket-help-topics.png)
 
----
 
-## Step 5 — The Ticket Lifecycle (End-to-End Example)
+
+## Step 5 - The Ticket Lifecycle (End-to-End Example)
 
 Here is a complete example of a ticket flowing through the system:
 
@@ -152,46 +133,28 @@ They navigate to `http://172.16.0.1/osticket` and submit a ticket:
 Ticket auto-assigned to IT Support department with SEV-C SLA (8 hours to resolve).
 
 **3. Investigation**
-<!-- YOU WRITE HERE — Describe what the technician (you) does next.
-Example:
-"I opened the ticket, checked the user's account in AD Users and Computers.
-Confirmed the password had expired. Checked account was not locked." -->
+
+I opened the ticket, checked the user's account in AD Users and Computers.
+Confirmed the password had expired. Checked account was not locked.
 
 **4. Resolution**
-<!-- YOU WRITE HERE — Describe the fix.
-Example:
-"Reset the password in AD to a temporary value and checked
+
+Reset the password in AD to a temporary value and checked
 'User must change password at next logon'. Communicated
-the temporary password to the user via the ticket reply." -->
+the temporary password to the user via the ticket reply.
 
 **5. Closure**
+
 Ticket marked Resolved with full resolution notes documented.
 Closed after user confirms they can log in.
 
-**Screenshot — Example ticket open in osTicket:**
+**Screenshot : Example ticket open in osTicket:**
 
 ![Open Ticket](./screenshots/osticket-ticket-open.png)
 
-**Screenshot — Ticket resolved with notes:**
+**Screenshot : Ticket resolved with notes:**
 
 ![Resolved Ticket](./screenshots/osticket-ticket-resolved.png)
-
----
-
-## Knowledge Base Articles
-
-I authored the following KB articles to improve First Contact Resolution (FCR)
-and allow users to self-serve on common issues:
-
-| Article | Purpose |
-|---|---|
-| How to Reset Your Own Password | Guides users through Ctrl+Alt+Del → Change Password |
-| How to Map a Network Drive Manually | Step-by-step for users whose GPO drive mapping fails |
-| VPN Troubleshooting Steps | Common fixes before escalating to IT |
-| Printer Not Found | Basic printer diagnostics checklist |
-| Account Locked Out — What to Do | Explains the process so users know what to expect |
-
-See the full articles in [../06-knowledge-base](../06-knowledge-base/)
 
 ---
 
