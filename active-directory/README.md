@@ -109,8 +109,8 @@ separately  it's a common mistake to look for it inside Password Policy.
 
 <img alt="Lockout Policy GPO" src="./screenshots/gpo-lockout-policy.png" width="500">
 
-### GPO 2 - Desktop Wallpaper / Login Banner 
-Setting up Desktop Wallpapers for users + Login Banner for client 1 (win10) and client 2 (win11) as follows:
+### GPO 2 - Desktop Wallpaper  
+Setting up Desktop Wallpapers for users as follows:
 
 Wallpaper for m.tuck (from finance) it should be :
 
@@ -119,11 +119,6 @@ Wallpaper for m.tuck (from finance) it should be :
 Wallpaper for d.wain (from HR) it should be :
 
 <img alt="Desktop Wallpaper c2" src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=4896&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="500">
-
-Login Banner for client 1 and 2 (Windows/device) it should be :
-
-<img alt="Login Banner c1+2" src="./screenshots/Login-Banner.jpg" width="500">
-
 
 **Screenshots : GPO Editor showing Desktop Wallpaper settings:**
 
@@ -135,26 +130,18 @@ Login Banner for client 1 and 2 (Windows/device) it should be :
  
 <img alt="Desktop Wallpaper c2 GPO" src="./screenshots/gpo-Desktop-Wallpaper-policyc2.png" width="700">
 
-**Screenshot : GPO Editor showing Login Banner settings:**
+sharing specific folder path for UNC
 
-<img alt="Login Banner GPO" src="./screenshots/gpo-Login-Banner-policy.png" width="500">
+<img alt="folder path for UNC" src="./screenshots/folder-path-for-UNC.png" width="700">
 
 ### verifying if the GPOs worked
 
-**m.tuck's Wallpaper**
+**m.tuck's Wallpaper + password policy**
 <img alt="Desktop Wallpaper c1 GPO" src="./screenshots/gpo-Desktop-Wallpaper-policyc1-conformed.png" width="500">
 
-**d.wain's Wallpaper**
+**d.wain's Wallpaper + password policy**
 <img alt="Desktop Wallpaper c2 GPO" src="./screenshots/gpo-Desktop-Wallpaper-policyc2-conformed.png" width="500">
 
-**Windows 10 and 11 login Banner:**
-windows 10
-
-<img alt="login Banner GPOwin10" src="./screenshots/gpo-Login-Banner-policy-conformedwin10.png" width="500">
-
-windows 11
-
-<img alt="login Banner GPOwin11" src="./screenshots/gpo-Login-Banner-policy-conformedwin11.png" width="500">
 ---
 
 ## Step 4 - User Management
