@@ -158,22 +158,14 @@ sharing specific folder path for UNC
 5. Click Finish
 
 
-I created an IT admin account called 'a-mboudieb' in the _ADMIN OU
+I created an IT admin account in the _ADMIN OU
 separate from my regular user account. This follows the least-privilege
 principle. The admin account is only used when admin rights are actually needed.
-
-**Screenshot : New user creation dialog:**
-
-![New User](./screenshots/new-user-creation.png)
 
 ### Bulk User Creation (via PowerShell)
 
 For scale testing, I created 1,000+ users automatically using a PowerShell script.
-See the full documentation in [powershell-automation](../powershell-automation/README.md).
-
-**Screenshot : AD Users and Computers showing bulk-created users:**
-
-![Bulk Users in AD](./screenshots/bulk-users-ad.png)
+See the full documentation in [powershell-automation](../powershell-automation/).
 
 ---
 
