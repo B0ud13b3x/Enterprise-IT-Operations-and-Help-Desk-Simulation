@@ -13,7 +13,6 @@ Doing this manually (right-click → New User, repeat 500 times) is
 slow, error-prone, and doesn't scale. PowerShell scripting is the
 industry-standard solution.
 
----
 
 ## What This Demonstrates
 
