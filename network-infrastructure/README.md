@@ -22,7 +22,7 @@ the virtual machines, network adapters, and routing that everything else runs on
 
 ## Network Diagram
 
-![Network Diagram](./network-diagram.png)
+<img alt="Network Diagram" src="./network-diagram.png" width="700">
 
 The server acts as a dual-homed gateway:
 - **NIC 1 (NAT)** - connects the server to the internet through VirtualBox's built-in NAT. IP assigned automatically by VirtualBox DHCP.
@@ -41,7 +41,7 @@ For each client I allocated 4096MB RAM and 40-50GB storage.
 
 **Screenshot : VirtualBox showing all 3 VMs:**
 
-![VirtualBox VM List](./screenshots/virtualbox-vms.png)
+<img alt="VirtualBox VM List" src="./screenshots/virtualbox-vms.png" width="400">
 
 ---
 
@@ -65,11 +65,11 @@ assign it the static IP 172.16.0.1 with subnet mask 255.255.255.0.
 
 **Screenshot : NIC 1 (NAT) settings:**
 
-![NIC 1 NAT Config](./screenshots/nic1-nat.png)
+<img alt="NIC 1 NAT Config" src="./screenshots/nic1-nat.png" width="700">
 
 **Screenshot : NIC 2 (Internal) static IP assigned:**
 
-![NIC 2 Internal Config](./screenshots/nic2-internal.png)
+<img alt="NIC 2 Internal Config" src="./screenshots/nic2-internal.png" width="700">
 
 ---
 
@@ -92,7 +92,7 @@ so I could tell them apart in the RAS wizard.
 
 **Screenshot : RAS configured and running (green arrow):**
 
-![RAS Config](./screenshots/ras-routing.png)
+<img alt="RAS Config" src="./screenshots/ras-routing.png" width="700">
 
 ---
 
@@ -125,7 +125,7 @@ set it shorter for a large network.
 
 **Screenshot : DHCP scope active in Server Manager:**
 
-![DHCP Scope](./screenshots/dhcp-scope.png)
+<img alt="DHCP Scope" src="./screenshots/dhcp-scope.png" width="700">
 
 ---
 
@@ -142,11 +142,11 @@ With the server running AD DS and DHCP, I joined both client machines to `mydoma
 
 **Screenshot : `ipconfig /all` on a client showing DC as gateway and DNS:**
 
-![Client IPCONFIG](./screenshots/client-ipconfig.png)
+<img alt="Client IPCONFIG" src="./screenshots/client-ipconfig.png" width="700">
 
 **Screenshot : Client successfully joined to mydomain.com:**
 
-![Domain Join Success](./screenshots/domain-join.png)
+<img alt="Domain Join Success" src="./screenshots/domain-join.png" width="700">
 
 ---
 
