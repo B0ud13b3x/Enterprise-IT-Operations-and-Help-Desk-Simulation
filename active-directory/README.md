@@ -137,9 +137,11 @@ sharing specific folder path for UNC
 ### verifying if the GPOs worked
 
 **m.tuck's Wallpaper + password policy**
+
 <img alt="Desktop Wallpaper c1 GPO" src="./screenshots/gpo-Desktop-Wallpaper-policyc1-conformed.png" width="500">
 
 **d.wain's Wallpaper + password policy**
+
 <img alt="Desktop Wallpaper c2 GPO" src="./screenshots/gpo-Desktop-Wallpaper-policyc2-conformed.png" width="500">
 
 ---
