@@ -1,11 +1,11 @@
-# Case 04 — Shared Drive Not Appearing on Client After GPO
+# Case 04 - Shared Drive Not Appearing on Client After GPO
 
 **Category:** Group Policy / File Sharing  
 **Difficulty:** Medium  
 **Time to Resolve:** ~20 minutes  
 **osTicket Ticket:** #1004
 
----
+
 
 ## Situation
 
@@ -17,7 +17,7 @@ The share existed on the server and was accessible if mapped manually.
 The GPO appeared to be configured correctly in Group Policy Management.
 No error messages were shown to the user — the drive simply wasn't there.
 
----
+
 
 ## Task
 
@@ -28,7 +28,7 @@ and ensure `Z:` drive auto-maps correctly for all Sales users on login.
 
 ## Action
 
-**Step 1 — Verify the share exists and is accessible**
+**Step 1 - Verify the share exists and is accessible**
 
 On the server, confirmed the shared folder existed:
 - Folder: `C:\Shares\Sales`
@@ -42,16 +42,16 @@ Tested manually on the client:
 
 The share itself was working. The problem was the GPO not applying.
 
-**Step 2 — Force a GPO refresh on the client**
+**Step 2 - Force a GPO refresh on the client**
 
 Ran on the client:
 ```
 gpupdate /force
 ```
 
-Logged off and back on — drive still not appearing. ❌
+Logged off and back on , drive still not appearing. ❌
 
-**Step 3 — Check which GPOs are actually applying**
+**Step 3 - Check which GPOs are actually applying**
 
 Ran on the client:
 ```
@@ -61,40 +61,22 @@ gpresult /r
 Reviewed the output. The drive mapping GPO was **not listed** under
 "Applied Group Policy Objects."
 
-<!-- YOU WRITE HERE — What did gpresult show?
-Example:
-"gpresult showed the Default Domain Policy was applying but my
+gpresult showed the Default Domain Policy was applying but my
 custom drive mapping GPO was not listed at all — it showed under
-'Denied GPOs' with reason: 'Inaccessible'." -->
+'Denied GPOs' with reason: 'Inaccessible'.
 
 **Step 4 — Identify the root cause**
 
-<!-- YOU WRITE HERE — What was the actual problem?
-Example below — pick whichever matches what you found:
-
-OPTION A — GPO linked to wrong OU:
-"I went back to Group Policy Management and found I had linked
+I went back to Group Policy Management and found I had linked
 the GPO to the _CORP OU root but not to the Sales OU specifically.
 Since the users were in _CORP → Sales, and I didn't enable
-inheritance, the policy wasn't reaching them."
+inheritance, the policy wasn't reaching them.
+**Step 5 - Apply the fix**
 
-OPTION B — User Configuration vs Computer Configuration:
-"Drive mapping policies must be under User Configuration → Preferences
-→ Windows Settings → Drive Maps. I had accidentally put mine under
-Computer Configuration, which doesn't apply drive mappings per user."
+I moved the GPO link from the _CORP OU to the Sales OU directly.
+Then ran gpupdate /force on the client and logged off and back on.
 
-OPTION C — GP Preferences not enabled:
-"The GPO was configured correctly but I hadn't enabled
-'Group Policy Preferences Client-Side Extensions' on the client." -->
-
-**Step 5 — Apply the fix**
-
-<!-- YOU WRITE HERE — What specifically did you change?
-Example:
-"I moved the GPO link from the _CORP OU to the Sales OU directly.
-Then ran gpupdate /force on the client and logged off and back on." -->
-
-**Step 6 — Verify the fix**
+**Step 6 - Verify the fix**
 
 Ran `gpupdate /force` again → logged off → logged back in.
 
