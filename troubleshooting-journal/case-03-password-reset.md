@@ -1,4 +1,4 @@
-# Case 03 — Expired Password Preventing Domain Login
+# Case 03 - Expired Password Preventing Domain Login
 
 **Category:** Active Directory  
 **Difficulty:** Easy  
