@@ -33,7 +33,7 @@ This project is a high-fidelity simulation of an enterprise-level IT environment
 ## 🛡️ Technical Implementation
 
 ### 1. Identity & Access Management (AD DS)
-*   **Domain Configuration:** Architected `mydomain.com` as a simulated corporate forest.
+*   [**Domain Configuration:**](./active-directory/README.md) Architected `mydomain.com` as a simulated corporate forest.
 *   **OU Hierarchy:** Designed a granular Organizational Unit (OU) structure for departments (IT, HR, Sales, Finance) to practice least-privilege permission management.
 *   **Group Policy Objects (GPOs):** Implemented security baselines, including 90-day password rotation policies and account lockout thresholds (3 failed attempts).
 
