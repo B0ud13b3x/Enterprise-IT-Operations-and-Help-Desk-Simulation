@@ -12,12 +12,12 @@
 <img align="middle" src="https://osticket.com/wp-content/uploads/2021/03/osticket-supsys-new-1-e1616621912452.png" alt="osTicket">
 </p>
 
-## 🎯 Project Objective
+##  Project Objective
 This project is a high-fidelity simulation of an enterprise-level IT environment. It demonstrates the transition from **Infrastructure Deployment** (building the corporate backbone) to **Active Operations** (managing user lifecycles and technical incidents). By integrating a Windows Server 2022 Domain Controller with a functional ITSM platform (osTicket), I simulate the complete lifecycle of a technical incident from user submission to administrative resolution.
 
 
 
-## 📐 Network Architecture & Environment
+##  Network Architecture & Environment
 ![Network Diagram](./my%20first%20lab.png) 
 *Architecture showing the isolation of internal corporate clients from the public internet through a multi-homed Windows Server Gateway.*
 
@@ -30,7 +30,7 @@ This project is a high-fidelity simulation of an enterprise-level IT environment
 
 
 
-## 🛡️ Technical Implementation
+##  Technical Implementation
 
 ###  1. [Identity & Access Management (AD DS)](./active-directory)
 *   **Domain Configuration:** Architected `mydomain.com` as a simulated corporate forest.
@@ -50,10 +50,10 @@ This project is a high-fidelity simulation of an enterprise-level IT environment
 *   **Bulk User Creation:** a PowerShell script to programmatically create **1,000+ users** from a data file, simulating a large-scale enterprise onboarding event.
 
 
-## 🛠️ [The Troubleshooting Journal](./troubleshooting-journal)
+##  [The Troubleshooting Journal](./troubleshooting-journal)
 *In IT, knowing how to fix what breaks is more valuable than building it perfectly the first time.*
 
-## 🧰 Skills & Tools Demonstrated
+##  Skills & Tools Demonstrated
 *   **Identity Management:** Active Directory DS, GPO, PowerShell Scripting.
 *   **Networking:** TCP/IP, DNS, DHCP, VPN/Routing, NAT/RAS.
 *   **Support & Documentation:** Ticketing (osTicket), Technical Writing, Knowledge Base Management.
