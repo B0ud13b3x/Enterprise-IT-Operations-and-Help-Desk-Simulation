@@ -18,4 +18,4 @@ industry-standard solution.
 
 - **PowerShell scripting** for IT automation
 - **Active Directory user provisioning** at scale
-- **Real-world IT workflow** — bulk onboarding is a standard enterprise task
+- **Real-world IT workflow** bulk onboarding is a standard enterprise task
