@@ -50,9 +50,6 @@ This project is a high-fidelity simulation of an enterprise-level IT environment
 *   **Bulk User Creation:** a PowerShell script to programmatically create **1,000+ users** from a data file, simulating a large-scale enterprise onboarding event.
 
 
-##  [The Troubleshooting Journal](./troubleshooting-journal)
-*In IT, knowing how to fix what breaks is more valuable than building it perfectly the first time.*
-
 ##  Skills & Tools Demonstrated
 *   **Identity Management:** Active Directory DS, GPO, PowerShell Scripting.
 *   **Networking:** TCP/IP, DNS, DHCP, VPN/Routing, NAT/RAS.
