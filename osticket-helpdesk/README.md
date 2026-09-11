@@ -126,7 +126,7 @@ Here is a complete example of a ticket flowing through the system:
 A user tries to log into their workstation and gets a "password expired" message.
 They navigate to `http://172.16.0.1/osticket` and submit a ticket:
 - Help Topic: Password Reset
-- Subject: "Cannot log in — password expired"
+- Subject: "Cannot log in, password expired"
 - Message: "I'm getting a message saying my password has expired and I can't log in."
 
 **2. Triage**
@@ -160,8 +160,8 @@ Closed after user confirms they can log in.
 
 ## What This Demonstrates
 
-- **ITSM platform administration** — deploying and configuring a ticketing system
-- **SLA management** — defining and applying severity-based response targets  
-- **Ticket lifecycle management** — triage, assignment, resolution, closure
-- **Documentation discipline** — logging actions taken inside each ticket
-- **Help desk workflow** — mirrors real Tier 1 / Tier 2 support operations
+- **ITSM platform administration**  deploying and configuring a ticketing system
+- **SLA management**  defining and applying severity-based response targets  
+- **Ticket lifecycle management**  triage, assignment, resolution, closure
+- **Documentation discipline**  logging actions taken inside each ticket
+- **Help desk workflow**  mirrors real Tier 1 / Tier 2 support operations
